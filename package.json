@@ -1,0 +1,18 @@
+{
+  "name": "@bhumit_rohilla/electron_cookie_jar",
+  "description": "Electron cookie handler for the custom protocol.",
+  "version": "0.0.2",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "rollup": "rollup .\\index.mjs  --file .\\index.cjs --format cjs",
+    "pub": "yarn rollup && yarn publish"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/electron": "^1.6.10",
+    "rollup": "^4.17.2"
+  },
+  "author": "",
+  "license": "ISC"
+}
