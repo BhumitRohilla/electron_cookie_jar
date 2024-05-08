@@ -1,7 +1,7 @@
 {
   "name": "@bhumit_rohilla/electron_cookie_jar",
   "description": "Electron cookie handler for the custom protocol.",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "main": "index.js",
   "exports": {
     "import": "./index.mjs",
