@@ -3,6 +3,10 @@
   "description": "Electron cookie handler for the custom protocol.",
   "version": "0.0.3",
   "main": "index.js",
+  "exports": {
+    "import": "./index.mjs",
+    "require": "./index.cjs"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "rollup": "rollup .\\index.mjs  --file .\\index.cjs --format cjs",

@@ -88,4 +88,5 @@ export default class CookieJar{
             callback({requestHeaders: details.requestHeaders})
         })
     }
+    
 }
