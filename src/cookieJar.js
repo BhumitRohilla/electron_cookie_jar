@@ -69,12 +69,11 @@ export default class CookieJar{
      * @param {{ request?: (requestHeaderDetails: import('electron').OnHeadersReceivedListenerDetails) => void, response?: (responseHeaderdetails: import('electron').OnBeforeSendHeadersListenerDetails) => void}} handler 
      */
     add(window, filters, handler) {
-        window.webContents.session = session.defaultSession;
         // TODO Work on this to allow fromPartition Sessions
         //! When session.fromPartition is used onHeadersReceived and onBeforeSendHeaders are not called
         //* Hence has to set session to default
 
-        const session_ = session.defaultSession;
+        const session_ = window.webContents.session;
         session_.webRequest.onHeadersReceived((details, callback) => {
             const cookies = details.responseHeaders['Set-Cookie'];
             this.parseCookies(cookies);
